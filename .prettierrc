@@ -1,4 +1,5 @@
 {
+  "plugins": ["prettier-plugin-tailwindcss"],
   "htmlWhitespaceSensitivity": "strict",
   "quoteProps": "consistent",
   "trailingComma": "none",

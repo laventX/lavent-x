@@ -126,8 +126,10 @@ export const renderBackgroundStars = (
       const starTrans =
         stars[i].color.a * (stars[i].distance / 100) * stars[i].fadeIn;
 
+      ctx.beginPath();
+      ctx.arc(starXPos, starYPos, 1, 0, 2 * Math.PI, false);
       ctx.fillStyle = `rgba(${stars[i].color.r},${stars[i].color.g},${stars[i].color.b},${starTrans})`;
-      ctx.fillRect(starXPos, starYPos, 2, 2);
+      ctx.fill();
     }
   };
 

@@ -15,6 +15,16 @@ export const renderBackgroundStars = (
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+  if (window.devicePixelRatio > 1) {
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
+    canvas.width = canvasWidth * window.devicePixelRatio;
+    canvas.height = canvasHeight * window.devicePixelRatio;
+    canvas.style.width = canvasWidth + 'px';
+    canvas.style.height = canvasHeight + 'px';
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+
   class Star {
     angle: number;
     distance: number;

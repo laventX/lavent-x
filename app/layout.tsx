@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
-import './globals.css';
-import { exo2 } from '@/app/ui/fonts';
+import '@/styles/globals.css';
+import { exo2 } from '@/ui/fonts';
+import Background from '@/components/background/background';
+import clsx from 'clsx';
 
 export const metadata: Metadata = {
   title: 'LaventX | Front-End Developer',
@@ -28,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={exo2.className}>{children}</body>
+      <body className={clsx(exo2.className, 'text-white')}>
+        <Background />
+        {children}
+      </body>
     </html>
   );
 }

@@ -12,18 +12,35 @@ export const renderBackgroundStars = (
     return null;
   }
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  let canvasCenter: {
+    x: number;
+    y: number;
+  };
 
-  if (window.devicePixelRatio > 1) {
-    const canvasWidth = canvas.width;
-    const canvasHeight = canvas.height;
-    canvas.width = canvasWidth * window.devicePixelRatio;
-    canvas.height = canvasHeight * window.devicePixelRatio;
+  let canvasWidth: number;
+  let canvasHeight: number;
+
+  const setCansvasSize = () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const scale = Math.max(window.devicePixelRatio, 1);
+
+    canvasWidth = canvas.width;
+    canvasHeight = canvas.height;
+
+    canvas.width = canvasWidth * scale;
+    canvas.height = canvasHeight * scale;
+
     canvas.style.width = canvasWidth + 'px';
     canvas.style.height = canvasHeight + 'px';
-    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-  }
+
+    ctx.scale(scale, scale);
+
+    canvasCenter = { x: canvasWidth / 2, y: canvasHeight / 2 };
+  };
+
+  setCansvasSize();
 
   class Star {
     angle: number;
@@ -41,14 +58,10 @@ export const renderBackgroundStars = (
     }
   }
 
-  const canvasCenter = { x: canvas.width / 2, y: canvas.height / 2 };
   const stars: Star[] = [];
 
   window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvasCenter.x = canvas.width / 2;
-    canvasCenter.y = canvas.height / 2;
+    setCansvasSize();
   });
 
   const createStars = () => {
@@ -59,7 +72,7 @@ export const renderBackgroundStars = (
       newStar.speed = getRandomInteger(10, 100);
       newStar.distance = getRandomInteger(
         20,
-        canvas.width / 2 + canvas.height / 2
+        canvasWidth / 2 + canvasHeight / 2
       );
 
       const lum = getRandomInteger(1, 255);
@@ -77,19 +90,19 @@ export const renderBackgroundStars = (
       stars[i].distance +=
         stars[i].speed *
         starsSpeed *
-        (stars[i].distance / (canvas.width / 2 + canvas.height / 2));
+        (stars[i].distance / (canvasWidth / 2 + canvasHeight / 2));
       stars[i].fadeIn += 0.01;
 
       if (stars[i].fadeIn > 1) {
         stars[i].fadeIn = 1;
       }
 
-      if (stars[i].distance > canvas.width / 2 + canvas.height / 2) {
+      if (stars[i].distance > canvasWidth / 2 + canvasHeight / 2) {
         stars[i].angle = getRandomInteger(0, 2 * Math.PI);
         stars[i].speed = getRandomInteger(10, 100);
         stars[i].distance = getRandomInteger(
           1,
-          canvas.width / 2 + canvas.height / 2
+          canvasWidth / 2 + canvasHeight / 2
         );
 
         const lum = getRandomInteger(1, 255);
@@ -103,7 +116,7 @@ export const renderBackgroundStars = (
 
   const draw = () => {
     ctx.fillStyle = spaceColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
     for (let i = 0; i < stars.length; i++) {
       const starXPos =

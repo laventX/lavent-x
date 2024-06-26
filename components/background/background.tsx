@@ -29,7 +29,10 @@ export default function Background() {
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 top-0 -z-50 bg-space-500`}>
-      <canvas className={`h-full w-full bg-space-500`} ref={canvasRef} />
+      <canvas
+        className={`pointer-events-none h-full w-full bg-space-500`}
+        ref={canvasRef}
+      />
     </div>
   );
 }

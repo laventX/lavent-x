@@ -1,16 +1,30 @@
-import { getRandomInteger } from '@/lib/utils';
+import { getRandomNumber } from '@/lib/utils';
+import clamp from 'just-clamp';
 
-export const renderBackgroundStars = (
-  canvas: HTMLCanvasElement,
-  starsCount: number,
-  starsSpeed: number,
-  spaceColor: string
-) => {
+type backgroundStarsConfig = {
+  canvas: HTMLCanvasElement;
+  minStarsCount?: number;
+  maxStarsCount?: number;
+  starsCountMultiplier?: number;
+  starsSpeed?: number;
+  spaceColor?: string;
+};
+
+export const renderBackgroundStars = ({
+  canvas,
+  minStarsCount = 500,
+  maxStarsCount = 1000,
+  starsCountMultiplier = 1,
+  starsSpeed = 0.1,
+  spaceColor = '#000000'
+}: backgroundStarsConfig) => {
   const ctx = canvas.getContext('2d');
 
   if (!ctx) {
     return null;
   }
+
+  const STARS_DENSITY = 1608; // lower = more dense
 
   let canvasCenter: {
     x: number;
@@ -19,6 +33,21 @@ export const renderBackgroundStars = (
 
   let canvasWidth: number;
   let canvasHeight: number;
+
+  let starsCount: number;
+
+  const setStarsCount = () => {
+    starsCount = clamp(
+      minStarsCount,
+      Math.floor(
+        ((window.innerWidth * window.innerHeight) /
+          window.devicePixelRatio /
+          STARS_DENSITY) *
+          starsCountMultiplier
+      ),
+      maxStarsCount
+    );
+  };
 
   const setCansvasSize = () => {
     canvas.width = window.innerWidth;
@@ -41,6 +70,7 @@ export const renderBackgroundStars = (
   };
 
   setCansvasSize();
+  setStarsCount();
 
   class Star {
     angle: number;
@@ -58,25 +88,36 @@ export const renderBackgroundStars = (
     }
   }
 
-  const stars: Star[] = [];
+  let stars: Star[] = [];
 
   window.addEventListener('resize', () => {
     setCansvasSize();
+    setStarsCount();
+
+    if (stars.length > starsCount) {
+      stars = stars.slice(0, starsCount);
+    }
+
+    if (stars.length < starsCount) {
+      createStars();
+    }
   });
 
   const createStars = () => {
-    for (let i = 0; i < starsCount; i++) {
+    const newStarsCount = starsCount - stars.length;
+
+    for (let i = 0; i < newStarsCount; i++) {
       const newStar = new Star();
 
-      newStar.angle = getRandomInteger(0, 2 * Math.PI);
-      newStar.speed = getRandomInteger(10, 100);
-      newStar.distance = getRandomInteger(
+      newStar.angle = getRandomNumber(0, 2 * Math.PI);
+      newStar.speed = getRandomNumber(10, 100);
+      newStar.distance = getRandomNumber(
         20,
         canvasWidth / 2 + canvasHeight / 2
       );
 
-      const lum = getRandomInteger(1, 255);
-      newStar.fadeIn = getRandomInteger(0.01, 1);
+      const lum = getRandomNumber(1, 255);
+      newStar.fadeIn = getRandomNumber(0.01, 1);
       newStar.color.r = lum;
       newStar.color.g = lum;
       newStar.color.b = lum;
@@ -98,14 +139,14 @@ export const renderBackgroundStars = (
       }
 
       if (stars[i].distance > canvasWidth / 2 + canvasHeight / 2) {
-        stars[i].angle = getRandomInteger(0, 2 * Math.PI);
-        stars[i].speed = getRandomInteger(10, 100);
-        stars[i].distance = getRandomInteger(
+        stars[i].angle = getRandomNumber(0, 2 * Math.PI);
+        stars[i].speed = getRandomNumber(10, 100);
+        stars[i].distance = getRandomNumber(
           1,
           canvasWidth / 2 + canvasHeight / 2
         );
 
-        const lum = getRandomInteger(1, 255);
+        const lum = getRandomNumber(1, 255);
         stars[i].fadeIn = 0;
         stars[i].color.r = lum;
         stars[i].color.g = lum;

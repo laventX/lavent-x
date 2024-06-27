@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(3600deg)' }
+        }
+      },
+      animation: {
+        rotate: '5s cubic-bezier(0.22, 1, 0.36, 1) 1 alternate forwards rotate'
+      },
       colors: {
         space: {
           '500': '#09070c'

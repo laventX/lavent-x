@@ -7,7 +7,7 @@ import { colors } from '@/ui/colors';
 const BackgroundConfig = {
   MAX_STARS_COUNT: 1200,
   STARS_COUNT_MULTIPLIER: 1,
-  STARS_SPEED: 0.01,
+  STARS_SPEED: 0.005,
   SPACE_COLOR: colors.space['500']
 };
 

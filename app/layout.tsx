@@ -33,11 +33,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={clsx(exo2.className, 'text-white')}>
+    <html lang="en" className="h-full">
+      <body
+        className={clsx(
+          exo2.className,
+          'min-h-full min-w-[360px] break-words pb-12 pl-[48px] pr-[48px] md:pl-9 md:pr-9 sm:pl-6 sm:pr-6 text-white'
+        )}
+      >
         <Background />
         <Header />
-        {children}
+        <div className="flex items-start justify-center">
+          <div className="w-[1440px] 2xl:w-full">{children}</div>
+        </div>
       </body>
     </html>
   );

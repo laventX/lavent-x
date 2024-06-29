@@ -10,7 +10,7 @@ const BackgroundConfig = {
   MAX_STARS_COUNT: 1200,
   STARS_COUNT_MULTIPLIER: 1,
   STARS_SPEED: 0.005,
-  SPACE_COLOR: colors.space['500']
+  SPACE_COLOR: colors.space['900']
 };
 
 export default function Background() {
@@ -30,9 +30,9 @@ export default function Background() {
   }, []);
 
   return (
-    <div className={`fixed bottom-0 left-0 right-0 top-0 -z-50 bg-space-500`}>
+    <div className={`fixed bottom-0 left-0 right-0 top-0 -z-50 bg-space-900`}>
       <canvas
-        className={`pointer-events-none h-full w-full bg-space-500`}
+        className={`pointer-events-none h-full w-full bg-space-900`}
         ref={canvasRef}
       />
     </div>

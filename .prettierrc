@@ -1,5 +1,4 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
   "htmlWhitespaceSensitivity": "strict",
   "quoteProps": "consistent",
   "trailingComma": "none",
@@ -9,7 +8,21 @@
       "options": {
         "bracketSameLine": false,
         "singleQuote": true,
-        "jsxSingleQuote": false
+        "jsxSingleQuote": false,
+        "plugins": ["@trivago/prettier-plugin-sort-imports"],
+        "importOrder": [
+          "<THIRD_PARTY_MODULES>",
+          "^@/(public)/?(.*)$",
+          "^@/(store|hooks|lib)/?(.*)$",
+          "^@/types/?(.*)$",
+          "^@/styles/?(.*)$",
+          "^@/ui/?(.*)$",
+          "^@/components/?(.*)$",
+          "^@/(.*)$",
+          "^[./]"
+        ],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true
       }
     }
   ]

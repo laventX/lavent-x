@@ -1,4 +1,5 @@
 {
+  "plugins": ["prettier-plugin-tailwindcss"],
   "htmlWhitespaceSensitivity": "strict",
   "quoteProps": "consistent",
   "trailingComma": "none",
@@ -9,7 +10,10 @@
         "bracketSameLine": false,
         "singleQuote": true,
         "jsxSingleQuote": false,
-        "plugins": ["@trivago/prettier-plugin-sort-imports"],
+        "plugins": [
+          "@trivago/prettier-plugin-sort-imports",
+          "prettier-plugin-tailwindcss"
+        ],
         "importOrder": [
           "<THIRD_PARTY_MODULES>",
           "^@/(public)/?(.*)$",

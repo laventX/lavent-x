@@ -33,17 +33,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full min-h-full">
       <body
         className={clsx(
           exo2.className,
-          'min-h-full min-w-[360px] break-words pb-12 pl-[48px] pr-[48px] text-white md:pl-9 md:pr-9 sm:pl-6 sm:pr-6'
+          'grid h-full min-h-full w-full min-w-[360px] grid-cols-1 grid-rows-[min-content_1fr] break-words pb-12 pl-[48px] pr-[48px] text-white md:pl-9 md:pr-9 sm:pl-6 sm:pr-6'
         )}
       >
         <Background />
         <Header />
         <div className="flex items-start justify-center">
-          <div className="w-[1440px] 2xl:w-full">{children}</div>
+          <div className="h-full w-[1440px] 2xl:w-full">{children}</div>
         </div>
       </body>
     </html>

@@ -12,7 +12,7 @@ export default function Header({ className }: HeaderProps) {
     <div
       className={clsx(
         className,
-        'flex h-[208px] w-full items-start justify-center lg:h-[168px] sm:h-[128px]'
+        'flex h-[208px] w-full items-start justify-center lg:h-[168px] h-md:h-[128px] sm:h-[128px]'
       )}
     >
       <div

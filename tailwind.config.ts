@@ -31,6 +31,7 @@ const config: Config = {
       'xl': { max: '1279px' },
       'lg': { max: '1023px' },
       'md': { max: '767px' },
+      'h-md': { raw: '((max-width: 767px) and (max-height: 512px))' },
       'sm': { max: '639px' }
     }
   },

@@ -1,5 +1,7 @@
 import clsx from 'clsx';
+
 import { CustomComponentProps } from '@/types/components';
+
 import Logo from '@/components/logo/logo';
 
 type HeaderProps = CustomComponentProps;

@@ -1,8 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
-import { CustomComponentProps } from '@/types/components';
 import { useRef } from 'react';
+
+import { CustomComponentProps } from '@/types/components';
 
 type LogoProps = CustomComponentProps & {
   link?: boolean;

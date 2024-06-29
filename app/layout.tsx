@@ -1,8 +1,11 @@
-import type { Metadata } from 'next';
-import '@/styles/globals.css';
-import { exo2 } from '@/ui/fonts';
-import Background from '@/components/background/background';
 import clsx from 'clsx';
+import type { Metadata } from 'next';
+
+import '@/styles/globals.css';
+
+import { exo2 } from '@/ui/fonts';
+
+import Background from '@/components/background/background';
 import Header from '@/components/header/header';
 
 export const metadata: Metadata = {

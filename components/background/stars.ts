@@ -1,5 +1,6 @@
-import { getRandomNumber } from '@/lib/utils';
 import clamp from 'just-clamp';
+
+import { getRandomNumber } from '@/lib/utils';
 
 type backgroundStarsConfig = {
   canvas: HTMLCanvasElement;

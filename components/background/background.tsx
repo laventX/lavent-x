@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { renderBackgroundStars } from './stars';
+
 import { colors } from '@/ui/colors';
+
+import { renderBackgroundStars } from './stars';
 
 const BackgroundConfig = {
   MAX_STARS_COUNT: 1200,

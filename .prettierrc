@@ -16,6 +16,7 @@
         ],
         "importOrder": [
           "<THIRD_PARTY_MODULES>",
+          "^@/(data)/?(.*)$",
           "^@/(public)/?(.*)$",
           "^@/(store|hooks|lib)/?(.*)$",
           "^@/types/?(.*)$",

@@ -9,7 +9,6 @@ import projectTypeJson from '@/data/type-ns.json';
 import { CustomComponentProps } from '@/types/components';
 import { ProjectData, ProjectStatus, ProjectType } from '@/types/project';
 
-import Stack from '@/components/stack/stack';
 import SVGIcon from '@/components/svg-icon/svg-icon';
 
 const projectStatusNS = projectStatusJson as unknown as {

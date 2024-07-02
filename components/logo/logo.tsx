@@ -25,7 +25,7 @@ function Lavent({ className }: LaventProps) {
     <p
       className={clsx(
         className,
-        'text-6xl uppercase [font-weight:725] lg:text-5xl'
+        'text-[60px] uppercase [font-weight:725] lg:text-[48px]'
       )}
     >
       <span className="-tracking-[6px] md:sr-only">La</span>

@@ -37,7 +37,7 @@ export default function RootLayout({
       <body
         className={clsx(
           exo2.className,
-          'grid h-full min-h-full w-full min-w-[360px] grid-cols-1 grid-rows-[min-content_1fr] break-words pb-12 pl-[48px] pr-[48px] text-white md:pl-9 md:pr-9 sm:pl-6 sm:pr-6'
+          'grid h-full min-h-full w-full min-w-[360px] grid-cols-1 grid-rows-[min-content_1fr] break-words pb-12 pl-[48px] pr-[48px] text-white md:pl-[36px] md:pr-[36px] sm:pl-[24px] sm:pr-[24px]'
         )}
       >
         <Background />

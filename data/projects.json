@@ -7,6 +7,7 @@
     "noPreviewURLComment": null,
     "previewImage": "dbd-perks",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "pet",
     "status": "archive",
     "stack": {
@@ -35,6 +36,7 @@
     "noPreviewURLComment": null,
     "previewImage": "wallpaper-gallery",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "pet",
     "status": "archive",
     "stack": {
@@ -54,6 +56,7 @@
     "noPreviewURLComment": "You're already here.",
     "previewImage": "lavent-x",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "pet",
     "status": "active",
     "stack": {
@@ -79,7 +82,8 @@
     "noPreviewURLComment": null,
     "previewImage": "smart-device",
     "centeredPreviewImage": false,
-    "type": "practice",
+    "iconsTheme": "light",
+    "type": "training",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -106,6 +110,7 @@
     "noPreviewURLComment": null,
     "previewImage": "when-next-gta",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "pet",
     "status": "active",
     "stack": {
@@ -130,6 +135,7 @@
     "noPreviewURLComment": "Does not have a GUI.",
     "previewImage": "direct-linker",
     "centeredPreviewImage": true,
+    "iconsTheme": "dark",
     "type": "pet",
     "status": "active",
     "stack": {
@@ -149,7 +155,8 @@
     "noPreviewURLComment": null,
     "previewImage": "maine-coon",
     "centeredPreviewImage": false,
-    "type": "practice",
+    "iconsTheme": "light",
+    "type": "training",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -174,7 +181,8 @@
     "noPreviewURLComment": null,
     "previewImage": "cheelee",
     "centeredPreviewImage": false,
-    "type": "test",
+    "iconsTheme": "light",
+    "type": "test-assignment",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -198,7 +206,8 @@
     "noPreviewURLComment": null,
     "previewImage": "roman-nums",
     "centeredPreviewImage": true,
-    "type": "practice",
+    "iconsTheme": "light",
+    "type": "training",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -222,7 +231,8 @@
     "noPreviewURLComment": null,
     "previewImage": "star-likes",
     "centeredPreviewImage": false,
-    "type": "practice",
+    "iconsTheme": "light",
+    "type": "training",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -248,7 +258,8 @@
     "noPreviewURLComment": null,
     "previewImage": "mental-calc",
     "centeredPreviewImage": true,
-    "type": "practice",
+    "iconsTheme": "dark",
+    "type": "training",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -272,7 +283,8 @@
     "noPreviewURLComment": null,
     "previewImage": "calc",
     "centeredPreviewImage": true,
-    "type": "practice",
+    "iconsTheme": "light",
+    "type": "training",
     "status": "archive",
     "stack": {
       "javascript": true,
@@ -292,12 +304,13 @@
   },
   {
     "id": "starter-kit-vanilla",
-    "name": "Frontend starter kit (no framework).",
+    "name": "Frontend starter kit",
     "sourceURL": "https://github.com/laventX/starter-kit-vanilla",
     "previewURL": null,
     "noPreviewURLComment": "Does not have a GUI.",
     "previewImage": "starter-kit-vanilla",
     "centeredPreviewImage": true,
+    "iconsTheme": "light",
     "type": "pet",
     "status": "archive",
     "stack": {
@@ -321,6 +334,7 @@
     "noPreviewURLComment": "HTML Academy's servers are not running.",
     "previewImage": "cinemaddict",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "learning",
     "status": "archive",
     "stack": {
@@ -342,6 +356,7 @@
     "noPreviewURLComment": null,
     "previewImage": "kekstagram",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "learning",
     "status": "archive",
     "stack": {
@@ -357,12 +372,13 @@
   },
   {
     "id": "pognali",
-    "name": "«Let's go!»",
+    "name": "«Let's go?»",
     "sourceURL": "https://github.com/laventX/pognali",
     "previewURL": "https://laventx.github.io/pognali/",
     "noPreviewURLComment": null,
     "previewImage": "pognali",
     "centeredPreviewImage": false,
+    "iconsTheme": "light",
     "type": "learning",
     "status": "archive",
     "stack": {
@@ -389,6 +405,7 @@
     "noPreviewURLComment": null,
     "previewImage": "nerds",
     "centeredPreviewImage": false,
+    "iconsTheme": "dark",
     "type": "learning",
     "status": "archive",
     "stack": {

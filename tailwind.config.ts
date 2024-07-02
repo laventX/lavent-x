@@ -21,6 +21,7 @@ const config: Config = {
         space: {
           '100': '#d1d1e6',
           '200': '#b6b6d4',
+          '700': '#1c1527',
           '800': '#130e1a',
           '900': '#09070c'
         }
@@ -29,6 +30,7 @@ const config: Config = {
     screens: {
       '2xl': { max: '1535px' },
       'xl': { max: '1279px' },
+      '2lg': { max: '1087px' },
       'lg': { max: '1023px' },
       'md': { max: '767px' },
       'h-md': { raw: '((max-width: 767px) and (max-height: 512px))' },

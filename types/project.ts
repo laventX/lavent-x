@@ -1,3 +1,9 @@
+export type IconsTheme = 'dark' | 'light';
+
+export type ProjectStatus = 'active' | 'archive' | 'development';
+
+export type ProjectType = 'pet' | 'test-assignment' | 'training' | 'learning';
+
 export type StackData = {
   [key: string]: boolean;
 } | null;
@@ -10,7 +16,8 @@ export type ProjectData = {
   noPreviewURLComment: string | null;
   previewImage: string;
   centeredPreviewImage: boolean;
-  type: 'pet' | 'test' | 'practice' | 'learning';
-  status: 'active' | 'archive' | 'development';
+  iconsTheme: IconsTheme;
+  type: ProjectType;
+  status: ProjectStatus;
   stack: StackData;
 };

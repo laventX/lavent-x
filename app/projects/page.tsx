@@ -2,20 +2,20 @@
 
 import { Tooltip } from 'react-tooltip';
 
-import json from '@/data/projects.json';
+import projectsJson from '@/data/projects.json';
 
 import { ProjectData } from '@/types/project';
 
 import Projects from '@/components/projects/projects';
 
-const projects = json as unknown as ProjectData[];
+const projectsData = projectsJson as unknown as ProjectData[];
 
 export default function Page() {
   return (
     <>
       <h1 className="sr-only">Projects</h1>
 
-      <Projects projects={projects} />
+      <Projects projects={projectsData} />
 
       <Tooltip
         className="!z-[9000] !bg-space-700 !transition-none !duration-0"

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 
-import { CustomComponentProps } from '@/types/components';
-import { ProjectData } from '@/types/project';
+import { CustomComponentProps, ProjectData } from '@/types';
 
 import Project from '@/components/project/project';
 

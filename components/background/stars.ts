@@ -1,31 +1,14 @@
 import clamp from 'just-clamp';
 
+import { StarsConfig } from '@/consts';
 import { getRandomNumber } from '@/lib/utils';
 
-type backgroundStarsConfig = {
-  canvas: HTMLCanvasElement;
-  minStarsCount?: number;
-  maxStarsCount?: number;
-  starsCountMultiplier?: number;
-  starsSpeed?: number;
-  spaceColor?: string;
-};
-
-export const renderBackgroundStars = ({
-  canvas,
-  minStarsCount = 500,
-  maxStarsCount = 1000,
-  starsCountMultiplier = 1,
-  starsSpeed = 0.1,
-  spaceColor = '#000000'
-}: backgroundStarsConfig) => {
+export const renderStars = (canvas: HTMLCanvasElement) => {
   const ctx = canvas.getContext('2d');
 
   if (!ctx) {
     return null;
   }
-
-  const STARS_DENSITY = 1608; // lower = more dense
 
   let canvasCenter: {
     x: number;
@@ -39,14 +22,14 @@ export const renderBackgroundStars = ({
 
   const setStarsCount = () => {
     starsCount = clamp(
-      minStarsCount,
+      StarsConfig.MIN_STARS_COUNT,
       Math.floor(
         ((window.innerWidth * window.innerHeight) /
           window.devicePixelRatio /
-          STARS_DENSITY) *
-          starsCountMultiplier
+          StarsConfig.STARS_DENSITY) *
+          StarsConfig.STARS_COUNT_MULTIPLIER
       ),
-      maxStarsCount
+      StarsConfig.MAX_STARS_COUNT
     );
   };
 
@@ -131,7 +114,7 @@ export const renderBackgroundStars = ({
     for (let i = 0; i < stars.length; i++) {
       stars[i].distance +=
         stars[i].speed *
-        starsSpeed *
+        StarsConfig.STARS_SPEED *
         (stars[i].distance / (canvasWidth / 2 + canvasHeight / 2));
       stars[i].fadeIn += 0.01;
 
@@ -157,7 +140,7 @@ export const renderBackgroundStars = ({
   };
 
   const draw = () => {
-    ctx.fillStyle = spaceColor;
+    ctx.fillStyle = StarsConfig.SPACE_COLOR;
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
     for (let i = 0; i < stars.length; i++) {

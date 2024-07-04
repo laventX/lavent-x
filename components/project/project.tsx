@@ -3,19 +3,19 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import projectStatusJson from '@/data/status-ns.json';
-import projectTypeJson from '@/data/type-ns.json';
+import projectStatusJson from '@/data/locales/project-status.json';
+import projectTypeJson from '@/data/locales/project-type.json';
 
 import { CustomComponentProps } from '@/types/components';
 import { ProjectData, ProjectStatus, ProjectType } from '@/types/project';
 
 import SVGIcon from '@/components/svg-icon/svg-icon';
 
-const projectStatusNS = projectStatusJson as unknown as {
+const projectStatusLocales = projectStatusJson as unknown as {
   [key in ProjectStatus]: string;
 };
 
-const projectTypeNS = projectTypeJson as unknown as {
+const projectTypeLocales = projectTypeJson as unknown as {
   [key in ProjectType]: string;
 };
 
@@ -38,7 +38,7 @@ export default function Project({ className, data }: ProjectProps) {
           data={data}
         />
 
-        <ProjectLinks
+        <Links
           className="absolute left-1/2 top-1/2 hidden h-[48px] w-[160px] -translate-x-1/2 -translate-y-1/2 transform flex-row justify-between group-focus-within/project:flex group-hover/project:flex"
           data={data}
         />
@@ -96,7 +96,7 @@ type ProjectLinksProps = CustomComponentProps & {
   data: ProjectData;
 };
 
-function ProjectLinks({ className, data }: ProjectLinksProps) {
+function Links({ className, data }: ProjectLinksProps) {
   return (
     <div className={className}>
       {data.previewURL !== null ? (
@@ -156,7 +156,7 @@ type TypeProps = CustomComponentProps & {
 
 function Type({ className, data }: TypeProps) {
   if (data.type === 'pet') {
-    return <></>;
+    return null;
   }
 
   return (

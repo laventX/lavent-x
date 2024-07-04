@@ -4,7 +4,7 @@ import { Tooltip } from 'react-tooltip';
 
 import projectsJson from '@/data/projects.json';
 
-import { ProjectData } from '@/types/project';
+import { ProjectData } from '@/types';
 
 import Projects from '@/components/projects/projects';
 

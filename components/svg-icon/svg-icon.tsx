@@ -1,5 +1,4 @@
-import { CustomComponentProps } from '@/types/components';
-import { IconsTheme } from '@/types/project';
+import { CustomComponentProps, IconsTheme } from '@/types';
 
 type SVGIconProps = CustomComponentProps & {
   icon:

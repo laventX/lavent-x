@@ -2,16 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-import { colors } from '@/ui/colors';
-
-import { renderBackgroundStars } from './stars';
-
-const BackgroundConfig = {
-  MAX_STARS_COUNT: 1200,
-  STARS_COUNT_MULTIPLIER: 1,
-  STARS_SPEED: 0.005,
-  SPACE_COLOR: colors.space['900']
-};
+import { renderStars } from './stars';
 
 export default function Background() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -21,12 +12,7 @@ export default function Background() {
       return;
     }
 
-    renderBackgroundStars({
-      canvas: canvasRef.current,
-      maxStarsCount: BackgroundConfig.MAX_STARS_COUNT,
-      starsSpeed: BackgroundConfig.STARS_SPEED,
-      spaceColor: BackgroundConfig.SPACE_COLOR
-    });
+    renderStars(canvasRef.current);
   }, []);
 
   return (

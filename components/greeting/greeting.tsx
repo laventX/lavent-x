@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import Typewriter from 'typewriter-effect';
 
-import { CustomComponentProps } from '@/types/components';
+import { CustomComponentProps } from '@/types';
 
 import { sourceCodePro } from '@/ui/fonts';
 

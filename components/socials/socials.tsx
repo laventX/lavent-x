@@ -1,27 +1,12 @@
 import clsx from 'clsx';
 
-import { CustomComponentProps } from '@/types/components';
+import socialsJson from '@/data/socials.json';
+
+import { CustomComponentProps, SocialsLinks } from '@/types';
 
 type SocialsProps = CustomComponentProps;
 
-const socials = [
-  {
-    name: 'GitHub',
-    href: 'https://github.com/laventX'
-  },
-  {
-    name: 'Telegram',
-    href: 'https://t.me/laventmx'
-  },
-  {
-    name: 'X',
-    href: 'https://x.com/laventX/'
-  },
-  {
-    name: 'E-mail',
-    href: 'mailto:laventmx@gmail.com'
-  }
-];
+const socialLinks = socialsJson as unknown as SocialsLinks;
 
 export default function Socials({ className }: SocialsProps) {
   return (
@@ -31,7 +16,7 @@ export default function Socials({ className }: SocialsProps) {
         'text-center text-4xl leading-[3.25rem] md:text-3xl md:leading-[2.75rem]'
       )}
     >
-      {socials.map((social) => {
+      {socialLinks.map((social) => {
         return (
           <li key={social.name}>
             <a

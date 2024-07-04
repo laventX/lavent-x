@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { CustomComponentProps } from '@/types/components';
+import { CustomComponentProps } from '@/types';
 
 import Logo from '@/components/logo/logo';
 import Navigation from '@/components/navigation/navigation';

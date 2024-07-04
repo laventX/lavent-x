@@ -8,36 +8,25 @@ import Modal from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { useWindowSize } from 'usehooks-ts';
 
-import { CustomComponentProps } from '@/types/components';
+import { PAGES } from '@/consts';
 
-const pages = [
-  {
-    name: 'About me',
-    href: '/'
-  },
-  {
-    name: 'Socials',
-    href: '/socials'
-  },
-  {
-    name: 'Projects',
-    href: '/projects'
-  }
-];
+import { CustomComponentProps } from '@/types';
 
-const WIDE_SCREEN_WIDTH = 1200;
+import { getBreakpoint } from '@/ui/tailwind-config';
 
 type NavigationProps = CustomComponentProps;
 
 export default function Navigation({ className }: NavigationProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
+  const breakpoint3lg = getBreakpoint('3lg');
+
   const { width: windowWidth = 0 } = useWindowSize({
     initializeWithValue: false
   });
 
   const [screenWide, setScreenWide] = useState<boolean>(
-    windowWidth >= WIDE_SCREEN_WIDTH
+    windowWidth >= breakpoint3lg
   );
 
   const openModal = () => {
@@ -49,13 +38,13 @@ export default function Navigation({ className }: NavigationProps) {
   };
 
   useEffect(() => {
-    const isScreenWide = windowWidth >= WIDE_SCREEN_WIDTH;
+    const isScreenWide = windowWidth >= breakpoint3lg;
 
     setScreenWide(isScreenWide);
     if (isScreenWide && modalOpen) {
       closeModal();
     }
-  }, [windowWidth, modalOpen]);
+  }, [windowWidth, modalOpen, breakpoint3lg]);
 
   const handleNavigationButtonClick = () => {
     openModal();
@@ -103,7 +92,7 @@ function Links({ className, onLinkClick = () => {} }: LinksProps) {
 
   return (
     <div className={className}>
-      {pages.map((page) => {
+      {PAGES.map((page) => {
         const isActive = currentPathname === page.href;
 
         return (

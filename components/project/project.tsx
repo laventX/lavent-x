@@ -188,8 +188,14 @@ type StatusProps = CustomComponentProps & {
 };
 
 function Status({ className, data }: StatusProps) {
-  if (data.status === 'active') {
-    return <></>;
+  if (
+    data.status === 'active' ||
+    (data.status === 'archive' &&
+      (data.type === 'learning' ||
+        data.type === 'training' ||
+        data.type === 'test-assignment'))
+  ) {
+    return null;
   }
 
   return (

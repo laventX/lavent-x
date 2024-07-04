@@ -18,7 +18,7 @@ export default function Page() {
       <Projects projects={projectsData} />
 
       <Tooltip
-        className="!z-[9000] !bg-space-700 !transition-none !duration-0"
+        className="!z-[9000] !rounded-xl !bg-space-700 !text-base !transition-none !duration-0"
         anchorSelect=".tooltip"
         place="bottom"
         opacity={0.95}

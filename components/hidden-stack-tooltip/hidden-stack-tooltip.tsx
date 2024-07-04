@@ -17,7 +17,7 @@ export default function HiddenStackTooltip({
 }: HiddenStackTooltipProps) {
   return (
     <Tooltip
-      className="!z-[9000] !rounded-[24px] !bg-white/30 !p-[20px] !text-base !backdrop-blur-[32px] !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)] sm:!p-[16px] sm:!text-sm"
+      className="!z-[9000] !rounded-[24px] !bg-white/30 !p-[20px] !text-base !backdrop-blur-[32px] !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)] h-md:!p-[16px] h-md:!text-sm sm:!p-[16px] sm:!text-sm"
       anchorSelect=".hidden-stack-button"
       globalCloseEvents={{
         escape: true
@@ -47,16 +47,16 @@ export default function HiddenStackTooltip({
         }
 
         return (
-          <ul className="flex flex-col space-y-[16px] sm:space-y-[12px]">
+          <ul className="flex flex-col space-y-[16px] h-md:space-y-[12px] sm:space-y-[12px]">
             {hiddenStack.map((stackItem) => {
               return (
                 <li
-                  className="flex h-[32px] w-full flex-row items-center space-x-[12px] sm:h-[28px] sm:space-x-[8px]"
+                  className="flex h-[32px] w-full flex-row items-center space-x-[12px] h-md:h-[28px] h-md:space-x-[8px] sm:h-[28px] sm:space-x-[8px]"
                   key={stackItem.name}
                 >
                   {stackItem.link ? (
                     <a
-                      className="flex h-full w-full flex-row items-center space-x-[12px] sm:space-x-[8px]"
+                      className="flex h-full w-full flex-row items-center space-x-[12px] h-md:space-x-[8px] sm:space-x-[8px]"
                       href={stackItem.link}
                       target="_blank"
                       rel="noreferrer"
@@ -86,7 +86,7 @@ function HiddenStackItem({ data }: HiddenStackItemProps) {
   return (
     <>
       <SVGIcon
-        className="h-[32px] w-[32px] sm:h-[28px] sm:w-[28px]"
+        className="h-[32px] w-[32px] h-md:h-[28px] h-md:w-[28px] sm:h-[28px] sm:w-[28px]"
         icon={data.icon}
       />
       <span>{data.name}</span>

@@ -40,18 +40,18 @@ export default function Stack({
   return (
     <div
       className={clsx(
-        'z-10 flex h-[32px] max-w-[272px] flex-row items-center justify-end space-x-[8px] sm:h-[28px] sm:max-w-[232px] sm:space-x-[6px]',
+        'z-10 flex h-[32px] max-w-[272px] flex-row items-center justify-end space-x-[8px] h-md:h-[28px] h-md:max-w-[232px] h-md:space-x-[6px] sm:h-[28px] sm:max-w-[232px] sm:space-x-[6px]',
         'before:absolute before:-bottom-[8px] before:-left-[10px] before:-right-[10px] before:-top-[8px] before:-z-10 before:block before:rounded-[20px] before:bg-white/30 before:backdrop-blur-md',
         className
       )}
     >
       {shownStack.length > 0 && (
-        <ul className="flex flex-row items-center justify-end space-x-[8px] sm:space-x-[6px]">
+        <ul className="flex flex-row items-center justify-end space-x-[8px] h-md:space-x-[6px] sm:space-x-[6px]">
           {shownStack.map((stackItem, i) => {
             return (
               <li key={stackItem.name}>
                 <ShownStackItem
-                  className="h-[32px] w-[32px] sm:h-[28px] sm:w-[28px]"
+                  className="h-[32px] w-[32px] h-md:h-[28px] h-md:w-[28px] sm:h-[28px] sm:w-[28px]"
                   data={stackItem}
                   firstItem={i === 0}
                 />
@@ -62,7 +62,7 @@ export default function Stack({
       )}
       {hasHiddenStack && (
         <HiddenStackButton
-          className="h-[32px] w-[32px] sm:h-[28px] sm:w-[28px]"
+          className="h-[32px] w-[32px] h-md:h-[28px] h-md:w-[28px] sm:h-[28px] sm:w-[28px]"
           theme={theme}
           projectID={projectID}
         />

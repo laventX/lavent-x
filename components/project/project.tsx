@@ -44,7 +44,7 @@ export default function Project({ className, data }: ProjectProps) {
         />
 
         <Links
-          className="absolute left-1/2 top-1/2 hidden h-[48px] w-[160px] -translate-x-1/2 -translate-y-1/2 transform flex-row justify-between group-focus-within/project:flex group-hover/project:flex"
+          className="absolute left-1/2 top-1/2 hidden h-[48px] w-[160px] -translate-x-1/2 -translate-y-1/2 transform flex-row items-center justify-between group-focus-within/project:flex group-hover/project:flex sm:h-[36px] sm:w-[120px]"
           data={data}
         />
 
@@ -60,7 +60,7 @@ export default function Project({ className, data }: ProjectProps) {
           theme={data.iconsTheme}
         />
       </div>
-      <h2 className="w-full pt-[0.375rem] text-center text-[1.375rem] leading-[1.875rem]">
+      <h2 className="w-full pt-[0.375rem] text-center text-[1.375rem] leading-[1.875rem] sm:text-xl">
         {data.name}
       </h2>
     </div>
@@ -116,7 +116,7 @@ function Links({ className, data }: ProjectLinksProps) {
           data-tooltip-place="left"
         >
           <SVGIcon
-            className="h-[48px] w-[64px] text-space-800"
+            className="h-[48px] w-[64px] text-space-800 sm:h-[28px] sm:w-[48px]"
             icon="preview"
             theme={data.iconsTheme}
           />
@@ -124,7 +124,7 @@ function Links({ className, data }: ProjectLinksProps) {
         </a>
       ) : (
         <div
-          className="tooltip h-[48px] w-[64px] text-space-800"
+          className="tooltip h-[48px] w-[64px] text-space-800 sm:h-[36px] sm:w-[48px]"
           tabIndex={0}
           data-tooltip-content={data.noPreviewURLComment}
           data-tooltip-place="left"
@@ -146,7 +146,7 @@ function Links({ className, data }: ProjectLinksProps) {
           data-tooltip-place="right"
         >
           <SVGIcon
-            className="h-[48px] w-[48px] text-space-800"
+            className="h-[48px] w-[48px] text-space-800 sm:h-[36px] sm:w-[36px]"
             icon="github"
             theme={data.iconsTheme}
           />
@@ -174,7 +174,7 @@ function Type({ className, data }: TypeProps) {
       data-tooltip-place="left"
     >
       <SVGIcon
-        className="h-[36px] w-[36px] text-space-800"
+        className="h-[36px] w-[36px] text-space-800 sm:h-[28px] sm:w-[28px]"
         icon={data.type}
         theme={data.iconsTheme}
       />
@@ -206,7 +206,7 @@ function Status({ className, data }: StatusProps) {
       data-tooltip-place="right"
     >
       <SVGIcon
-        className="h-[36px] w-[36px] text-space-800"
+        className="h-[36px] w-[36px] text-space-800 sm:h-[28px] sm:w-[28px]"
         icon={data.status}
         theme={data.iconsTheme}
       />

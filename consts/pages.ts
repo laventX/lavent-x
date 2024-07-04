@@ -4,11 +4,11 @@ export const PAGES = [
     href: '/'
   },
   {
-    name: 'Socials',
-    href: '/socials'
-  },
-  {
     name: 'Projects',
     href: '/projects'
+  },
+  {
+    name: 'Socials',
+    href: '/socials'
   }
 ];

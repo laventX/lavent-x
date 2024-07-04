@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { PlacesType } from 'react-tooltip';
 
 import { SHOWN_STACK_SIZE } from '@/consts';
 import { getShownStack } from '@/model/stack';
@@ -39,18 +40,20 @@ export default function Stack({
   return (
     <div
       className={clsx(
-        className,
-        'flex h-[32px] w-[272px] flex-row items-center justify-end space-x-[8px]'
+        'z-10 flex h-[32px] max-w-[272px] flex-row items-center justify-end space-x-[8px]',
+        'before:absolute before:-bottom-[8px] before:-left-[10px] before:-right-[10px] before:-top-[8px] before:-z-10 before:block before:rounded-[20px] before:bg-white/30 before:backdrop-blur-md',
+        className
       )}
     >
       {shownStack.length > 0 && (
         <ul className="flex flex-row items-center justify-end space-x-[8px]">
-          {shownStack.map((stackItem) => {
+          {shownStack.map((stackItem, i) => {
             return (
               <li key={stackItem.name}>
                 <ShownStackItem
                   className="h-[32px] w-[32px]"
                   data={stackItem}
+                  firstItem={i === 0}
                 />
               </li>
             );
@@ -70,9 +73,13 @@ export default function Stack({
 
 type ShownStackItemProps = CustomComponentProps & {
   data: StackItem;
+  firstItem: boolean;
 };
 
-function ShownStackItem({ className, data }: ShownStackItemProps) {
+function ShownStackItem({ className, data, firstItem }: ShownStackItemProps) {
+  const tooltipPlace: PlacesType = firstItem ? 'left' : 'bottom';
+  const tooltipOffset = firstItem ? 11 : 10;
+
   return data.link ? (
     <a
       className={clsx(className, 'tooltip flex items-center justify-center')}
@@ -80,7 +87,8 @@ function ShownStackItem({ className, data }: ShownStackItemProps) {
       target="_blank"
       rel="noreferrer"
       data-tooltip-content={data.name}
-      data-tooltip-place="bottom"
+      data-tooltip-place={tooltipPlace}
+      data-tooltip-offset={tooltipOffset}
     >
       <ShownStackItemIcon data={data} />
     </a>
@@ -89,7 +97,8 @@ function ShownStackItem({ className, data }: ShownStackItemProps) {
       className={clsx(className, 'tooltip flex items-center justify-center')}
       tabIndex={0}
       data-tooltip-content={data.name}
-      data-tooltip-place="bottom"
+      data-tooltip-place={tooltipPlace}
+      data-tooltip-offset={tooltipOffset}
     >
       <ShownStackItemIcon data={data} />
     </div>
@@ -124,7 +133,7 @@ function HiddenStackButton({ className, projectID, theme }: HiddenStackProps) {
       tabIndex={0}
       data-project-id={projectID}
     >
-      <SVGIcon className="w-[70%]" icon="more" theme={theme} />
+      <SVGIcon className="w-full" icon="more" theme={theme} />
     </div>
   );
 }

@@ -34,12 +34,12 @@ export default function Project({ className, data }: ProjectProps) {
       <div
         className={clsx(
           className,
-          'group/project relative h-[225px] w-full min-w-[312px] max-w-[480px] rounded-xl bg-space-800/40 text-space-700 shadow-2xl backdrop-blur-sm'
+          'group/project relative h-[225px] w-full min-w-[312px] max-w-[480px] rounded-[24px] bg-space-800/40 text-space-700 shadow-2xl backdrop-blur-sm'
         )}
         tabIndex={0}
       >
         <PreviewImage
-          className="h-full w-full rounded-xl object-cover transition-all group-focus-within/project:blur-[12px] group-focus-within/project:brightness-75 group-hover/project:blur-[12px] group-hover/project:brightness-75"
+          className="h-full w-full rounded-[24px] object-cover transition-all group-focus-within/project:blur-[12px] group-focus-within/project:brightness-[0.7] group-hover/project:blur-[12px] group-hover/project:brightness-[0.7]"
           data={data}
         />
 
@@ -54,7 +54,7 @@ export default function Project({ className, data }: ProjectProps) {
         </div>
 
         <Stack
-          className="absolute bottom-[12px] right-[12px]"
+          className="absolute bottom-[12px] right-[14px]"
           projectID={data.id}
           stackList={data.stackList}
           theme={data.iconsTheme}

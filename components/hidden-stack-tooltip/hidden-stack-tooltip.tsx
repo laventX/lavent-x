@@ -17,15 +17,16 @@ export default function HiddenStackTooltip({
 }: HiddenStackTooltipProps) {
   return (
     <Tooltip
-      className="!z-[9000] !rounded-xl !bg-space-700 !p-[20px] !text-base !transition-none !duration-0"
+      className="!z-[9000] !rounded-[24px] !bg-white/30 !p-[20px] !text-base !backdrop-blur-[32px] !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)]"
       anchorSelect=".hidden-stack-button"
       globalCloseEvents={{
-        escape: true,
-        scroll: true
+        escape: true
       }}
       clickable
+      offset={12}
+      noArrow
       place="right"
-      opacity={0.95}
+      opacity={1}
       render={({ activeAnchor }) => {
         if (activeAnchor === null) return;
 
@@ -55,7 +56,7 @@ export default function HiddenStackTooltip({
                 >
                   {stackItem.link ? (
                     <a
-                      className="flex h-full w-full flex-row items-center space-x-[12px] transition-colors hover:text-space-100 active:text-space-200"
+                      className="flex h-full w-full flex-row items-center space-x-[12px]"
                       href={stackItem.link}
                       target="_blank"
                       rel="noreferrer"

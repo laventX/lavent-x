@@ -18,10 +18,10 @@ export default function Page() {
       <Projects projects={projectsData} />
 
       <Tooltip
-        className="!z-[9000] !rounded-xl !bg-space-700 !text-base !transition-none !duration-0"
+        className="!z-[9000] !rounded-[16px] !bg-white/30 !text-base !backdrop-blur-[10px] !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)]"
         anchorSelect=".tooltip"
-        place="bottom"
-        opacity={0.95}
+        place="top"
+        noArrow
         globalCloseEvents={{
           escape: true,
           scroll: true

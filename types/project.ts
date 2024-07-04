@@ -1,12 +1,10 @@
+import { StackList } from '@/types';
+
 export type IconsTheme = 'dark' | 'light';
 
 export type ProjectStatus = 'active' | 'archive' | 'development';
 
 export type ProjectType = 'pet' | 'test-assignment' | 'training' | 'learning';
-
-export type StackData = {
-  [key: string]: boolean;
-} | null;
 
 export type ProjectData = {
   id: string;
@@ -19,5 +17,5 @@ export type ProjectData = {
   iconsTheme: IconsTheme;
   type: ProjectType;
   status: ProjectStatus;
-  stack: StackData;
+  stackList: StackList;
 };

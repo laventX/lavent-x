@@ -6,9 +6,14 @@ import Image from 'next/image';
 import projectStatusJson from '@/data/locales/project-status.json';
 import projectTypeJson from '@/data/locales/project-type.json';
 
-import { CustomComponentProps } from '@/types/components';
-import { ProjectData, ProjectStatus, ProjectType } from '@/types/project';
+import {
+  CustomComponentProps,
+  ProjectData,
+  ProjectStatus,
+  ProjectType
+} from '@/types';
 
+import Stack from '@/components/stack/stack';
 import SVGIcon from '@/components/svg-icon/svg-icon';
 
 const projectStatusLocales = projectStatusJson as unknown as {
@@ -48,10 +53,12 @@ export default function Project({ className, data }: ProjectProps) {
           <Status data={data} />
         </div>
 
-        {/* <Stack
+        <Stack
           className="absolute bottom-[12px] right-[12px]"
-          stack={data.stack}
-        /> */}
+          projectID={data.id}
+          stackList={data.stackList}
+          theme={data.iconsTheme}
+        />
       </div>
       <h2 className="w-full pt-[0.375rem] text-center text-[1.375rem] leading-[1.875rem]">
         {data.name}
@@ -163,7 +170,7 @@ function Type({ className, data }: TypeProps) {
     <div
       className={clsx(className, 'tooltip')}
       tabIndex={0}
-      data-tooltip-content={projectTypeNS[data.type]}
+      data-tooltip-content={projectTypeLocales[data.type]}
       data-tooltip-place="left"
     >
       <SVGIcon
@@ -171,7 +178,7 @@ function Type({ className, data }: TypeProps) {
         icon={data.type}
         theme={data.iconsTheme}
       />
-      <span className="sr-only">{projectTypeNS[data.type]}</span>
+      <span className="sr-only">{projectTypeLocales[data.type]}</span>
     </div>
   );
 }
@@ -189,7 +196,7 @@ function Status({ className, data }: StatusProps) {
     <div
       className={clsx(className, 'tooltip')}
       tabIndex={0}
-      data-tooltip-content={projectStatusNS[data.status]}
+      data-tooltip-content={projectStatusLocales[data.status]}
       data-tooltip-place="right"
     >
       <SVGIcon
@@ -197,7 +204,7 @@ function Status({ className, data }: StatusProps) {
         icon={data.status}
         theme={data.iconsTheme}
       />
-      <span className="sr-only">{projectStatusNS[data.status]}</span>
+      <span className="sr-only">{projectStatusLocales[data.status]}</span>
     </div>
   );
 }

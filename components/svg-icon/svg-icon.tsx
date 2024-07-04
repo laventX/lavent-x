@@ -1,47 +1,49 @@
 import { CustomComponentProps, IconsTheme } from '@/types';
 
+export type SVGIcon =
+  | 'a11y'
+  | 'archive'
+  | 'chart-js'
+  | 'crossbrowser'
+  | 'css'
+  | 'dayjs'
+  | 'desktop-first'
+  | 'development'
+  | 'eslint'
+  | 'github'
+  | 'gulp'
+  | 'html'
+  | 'i18next'
+  | 'javascript'
+  | 'learning'
+  | 'libphonenumber-js'
+  | 'lodash'
+  | 'mathjs'
+  | 'minisearch'
+  | 'mobile-first'
+  | 'more'
+  | 'nextjs'
+  | 'no-preview'
+  | 'pet'
+  | 'prettier'
+  | 'preview'
+  | 'pug'
+  | 'react'
+  | 'redux-toolkit'
+  | 'responsive'
+  | 'retina'
+  | 'sass'
+  | 'stylelint'
+  | 'tailwind'
+  | 'test-assignment'
+  | 'training'
+  | 'typescript'
+  | 'vite'
+  | 'vitest'
+  | 'webpack';
+
 type SVGIconProps = CustomComponentProps & {
-  icon:
-    | 'a11y'
-    | 'archive'
-    | 'chart-js'
-    | 'crossbrowser'
-    | 'css'
-    | 'dayjs'
-    | 'desktop-first'
-    | 'development'
-    | 'eslint'
-    | 'github'
-    | 'gulp'
-    | 'html'
-    | 'i18next'
-    | 'javascript'
-    | 'learning'
-    | 'libphonenumber-js'
-    | 'lodash'
-    | 'mathjs'
-    | 'minisearch'
-    | 'mobile-first'
-    | 'more'
-    | 'nextjs'
-    | 'no-preview'
-    | 'pet'
-    | 'prettier'
-    | 'preview'
-    | 'pug'
-    | 'react'
-    | 'redux-toolkit'
-    | 'responsive'
-    | 'retina'
-    | 'sass'
-    | 'stylelint'
-    | 'tailwind'
-    | 'test-assignment'
-    | 'training'
-    | 'typescript'
-    | 'vite'
-    | 'vitest'
-    | 'webpack';
+  icon: SVGIcon;
   theme?: IconsTheme;
 };
 
@@ -301,11 +303,7 @@ export default function SVGIcon({
       case 'lodash':
         return (
           <svg className={className} viewBox="0 -11.5 256 256">
-            <g fill="none" fillRule="evenodd">
-              <path
-                fill="#000000"
-                d="M.388 0H24.18v157.893h94.087v19.466H.387V0ZM183.154 46.503c16.222-2.163 33.526 1.081 46.503 11.896 14.06 9.733 21.63 27.036 22.71 43.258 2.164 19.466 0 38.933-10.814 55.155-9.733 12.977-24.873 21.629-42.177 22.71-16.222 2.163-34.606-1.081-48.665-11.896-12.978-10.814-19.467-27.036-21.63-43.258-2.162-17.304 0-36.77 10.815-51.91 8.652-15.14 25.955-24.874 43.258-25.955Zm3.245 18.385c10.814-1.082 22.71 2.162 31.362 9.733 7.57 8.651 11.896 19.466 12.978 30.28 1.081 11.897 0 24.874-5.408 35.689-5.407 10.814-15.14 18.385-27.036 20.547-10.815 2.163-22.71-1.081-30.281-7.57-8.652-6.489-14.059-16.222-16.222-25.955-2.163-14.059-1.081-28.118 4.326-41.095 5.407-11.896 17.303-20.548 30.28-21.63Z"
-              />
+            <g fillRule="evenodd">
               <path
                 fill="#3492FF"
                 d="M.388 205.477h255.224v27.037H.388v-27.037Z"
@@ -349,11 +347,30 @@ export default function SVGIcon({
 
       case 'more':
         return (
-          <svg className={className} viewBox="0 0 216.67 383.33">
-            <path
-              fill="#363853"
+          <svg className={className} viewBox="0 0 500 100">
+            <circle
+              fill={theme === 'dark' ? 'currentColor' : '#d6d6d6'}
               fillRule="evenodd"
-              d="M7.32 376.01c-9.76-9.76-9.76-25.59 0-35.35l148.99-148.99L7.32 42.68c-9.76-9.77-9.76-25.59 0-35.36 9.76-9.76 25.59-9.76 35.35 0l166.67 166.67a25 25 0 0 1 7.32 17.68 25 25 0 0 1-7.32 17.68L42.68 376.01c-9.76 9.76-25.59 9.76-35.35 0Z"
+              filter={SHADOW}
+              cx="450"
+              cy="50"
+              r="50"
+            />
+            <circle
+              fill={theme === 'dark' ? 'currentColor' : '#d6d6d6'}
+              fillRule="evenodd"
+              filter={SHADOW}
+              cx="250"
+              cy="50"
+              r="50"
+            />
+            <circle
+              fill={theme === 'dark' ? 'currentColor' : '#d6d6d6'}
+              fillRule="evenodd"
+              filter={SHADOW}
+              cx="50"
+              cy="50"
+              r="50"
             />
           </svg>
         );

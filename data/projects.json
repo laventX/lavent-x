@@ -1,5 +1,31 @@
 [
   {
+    "id": "lavent-x",
+    "name": "LaventX",
+    "sourceURL": "https://github.com/laventX/lavent-x",
+    "previewURL": null,
+    "noPreviewURLComment": "You're already here.",
+    "previewImage": "lavent-x",
+    "centeredPreviewImage": false,
+    "iconsTheme": "light",
+    "type": "pet",
+    "status": "active",
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "desktopFirst",
+      "eslint",
+      "nextjs",
+      "prettier",
+      "react",
+      "responsive",
+      "retina",
+      "tailwind",
+      "typescript",
+      "vitest"
+    ]
+  },
+  {
     "id": "dbd-perks",
     "name": "DBD Perks",
     "sourceURL": "https://github.com/laventX/dbd-perks",
@@ -10,23 +36,23 @@
     "iconsTheme": "light",
     "type": "pet",
     "status": "archive",
-    "stack": {
-      "react": true,
-      "reduxToolkit": true,
-      "typescript": true,
-      "sass": true,
-      "responsive": true,
-      "mobileFirst": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "i18next": true,
-      "minisearch": true,
-      "vite": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "i18next",
+      "minisearch",
+      "mobileFirst",
+      "prettier",
+      "react",
+      "reduxToolkit",
+      "responsive",
+      "retina",
+      "sass",
+      "stylelint",
+      "typescript",
+      "vite"
+    ]
   },
   {
     "id": "wallpaper-gallery",
@@ -39,68 +65,14 @@
     "iconsTheme": "light",
     "type": "pet",
     "status": "archive",
-    "stack": {
-      "react": true,
-      "javascript": true,
-      "tailwind": true,
-      "vite": true,
-      "eslint": true,
-      "prettier": true
-    }
-  },
-  {
-    "id": "lavent-x",
-    "name": "LaventX",
-    "sourceURL": "https://github.com/laventX/lavent-x",
-    "previewURL": null,
-    "noPreviewURLComment": "You're already here.",
-    "previewImage": "lavent-x",
-    "centeredPreviewImage": false,
-    "iconsTheme": "light",
-    "type": "pet",
-    "status": "active",
-    "stack": {
-      "nextjs": true,
-      "react": true,
-      "vitest": true,
-      "typescript": true,
-      "tailwind": true,
-      "responsive": true,
-      "desktopFirst": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "eslint": true,
-      "prettier": true
-    }
-  },
-  {
-    "id": "smart-device",
-    "name": "«Smart Device»",
-    "sourceURL": "https://github.com/laventX/smart-device",
-    "previewURL": "https://laventx.github.io/smart-device/",
-    "noPreviewURLComment": null,
-    "previewImage": "smart-device",
-    "centeredPreviewImage": false,
-    "iconsTheme": "light",
-    "type": "training",
-    "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "mobileFirst": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "libphonenumberJs": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "eslint",
+      "javascript",
+      "prettier",
+      "react",
+      "tailwind",
+      "vite"
+    ]
   },
   {
     "id": "when-next-gta",
@@ -113,65 +85,19 @@
     "iconsTheme": "light",
     "type": "pet",
     "status": "active",
-    "stack": {
-      "react": true,
-      "typescript": true,
-      "tailwind": true,
-      "responsive": true,
-      "mobileFirst": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "vite": true,
-      "eslint": true,
-      "prettier": true
-    }
-  },
-  {
-    "id": "direct-linker",
-    "name": "Direct Linker",
-    "sourceURL": "https://github.com/laventX/direct-linker",
-    "previewURL": null,
-    "noPreviewURLComment": "Does not have a GUI.",
-    "previewImage": "direct-linker",
-    "centeredPreviewImage": true,
-    "iconsTheme": "dark",
-    "type": "pet",
-    "status": "active",
-    "stack": {
-      "typescript": true,
-      "vitest": true,
-      "html": true,
-      "vite": true,
-      "stylelint": true,
-      "prettier": true
-    }
-  },
-  {
-    "id": "maine-coon",
-    "name": "«Maine Coon cattery»",
-    "sourceURL": "https://github.com/laventX/maine-coon",
-    "previewURL": "https://laventx.github.io/maine-coon/",
-    "noPreviewURLComment": null,
-    "previewImage": "maine-coon",
-    "centeredPreviewImage": false,
-    "iconsTheme": "light",
-    "type": "training",
-    "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "mobileFirst": true,
-      "crossbrowser": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "mobileFirst",
+      "prettier",
+      "react",
+      "responsive",
+      "retina",
+      "tailwind",
+      "typescript",
+      "vite"
+    ]
   },
   {
     "id": "cheelee",
@@ -184,44 +110,39 @@
     "iconsTheme": "light",
     "type": "test-assignment",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "pug": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "javascript",
+      "prettier",
+      "pug",
+      "retina",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
   },
   {
-    "id": "roman-nums",
-    "name": "Roman numerals converter",
-    "sourceURL": "https://github.com/laventX/roman-nums",
-    "previewURL": "https://laventx.github.io/roman-nums/",
-    "noPreviewURLComment": null,
-    "previewImage": "roman-nums",
+    "id": "direct-linker",
+    "name": "Direct Linker",
+    "sourceURL": "https://github.com/laventX/direct-linker",
+    "previewURL": null,
+    "noPreviewURLComment": "Does not have a GUI.",
+    "previewImage": "direct-linker",
     "centeredPreviewImage": true,
-    "iconsTheme": "light",
-    "type": "training",
-    "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "crossbrowser": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "iconsTheme": "dark",
+    "type": "pet",
+    "status": "active",
+    "stackList": [
+      "typescript",
+      "vitest",
+      "html",
+      "vite",
+      "stylelint",
+      "prettier"
+    ]
   },
   {
     "id": "star-likes",
@@ -234,21 +155,72 @@
     "iconsTheme": "light",
     "type": "training",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "mobileFirst": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "mobileFirst",
+      "prettier",
+      "responsive",
+      "retina",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
+  },
+  {
+    "id": "maine-coon",
+    "name": "«Maine Coon cattery»",
+    "sourceURL": "https://github.com/laventX/maine-coon",
+    "previewURL": "https://laventx.github.io/maine-coon/",
+    "noPreviewURLComment": null,
+    "previewImage": "maine-coon",
+    "centeredPreviewImage": false,
+    "iconsTheme": "light",
+    "type": "training",
+    "status": "archive",
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "mobileFirst",
+      "prettier",
+      "responsive",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
+  },
+  {
+    "id": "roman-nums",
+    "name": "Roman numerals converter",
+    "sourceURL": "https://github.com/laventX/roman-nums",
+    "previewURL": "https://laventx.github.io/roman-nums/",
+    "noPreviewURLComment": null,
+    "previewImage": "roman-nums",
+    "centeredPreviewImage": true,
+    "iconsTheme": "light",
+    "type": "training",
+    "status": "archive",
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "prettier",
+      "responsive",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
   },
   {
     "id": "mental-calc",
@@ -261,19 +233,47 @@
     "iconsTheme": "dark",
     "type": "training",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "crossbrowser": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "prettier",
+      "responsive",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
+  },
+  {
+    "id": "smart-device",
+    "name": "«Smart Device»",
+    "sourceURL": "https://github.com/laventX/smart-device",
+    "previewURL": "https://laventx.github.io/smart-device/",
+    "noPreviewURLComment": null,
+    "previewImage": "smart-device",
+    "centeredPreviewImage": false,
+    "iconsTheme": "light",
+    "type": "training",
+    "status": "archive",
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "libphonenumberJs",
+      "mobileFirst",
+      "prettier",
+      "responsive",
+      "retina",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
   },
   {
     "id": "calc",
@@ -286,21 +286,21 @@
     "iconsTheme": "light",
     "type": "training",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "crossbrowser": true,
-      "a11y": true,
-      "mathjs": true,
-      "lodash": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "lodash",
+      "mathjs",
+      "prettier",
+      "responsive",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
   },
   {
     "id": "starter-kit-vanilla",
@@ -313,18 +313,18 @@
     "iconsTheme": "light",
     "type": "pet",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "crossbrowser": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "prettier",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
   },
   {
     "id": "cinemaddict",
@@ -337,16 +337,16 @@
     "iconsTheme": "light",
     "type": "learning",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "css": true,
-      "html": true,
-      "crossbrowser": true,
-      "chartJs": true,
-      "dayjs": true,
-      "webpack": true,
-      "eslint": true
-    }
+    "stackList": [
+      "chartJs",
+      "crossbrowser",
+      "css",
+      "dayjs",
+      "eslint",
+      "html",
+      "javascript",
+      "webpack"
+    ]
   },
   {
     "id": "kekstagram",
@@ -359,16 +359,16 @@
     "iconsTheme": "light",
     "type": "learning",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "css": true,
-      "html": true,
-      "responsive": true,
-      "crossbrowser": true,
-      "a11y": true,
-      "webpack": true,
-      "eslint": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "css",
+      "eslint",
+      "html",
+      "javascript",
+      "responsive",
+      "webpack"
+    ]
   },
   {
     "id": "pognali",
@@ -381,21 +381,21 @@
     "iconsTheme": "light",
     "type": "learning",
     "status": "archive",
-    "stack": {
-      "javascript": true,
-      "sass": true,
-      "html": true,
-      "responsive": true,
-      "mobileFirst": true,
-      "crossbrowser": true,
-      "retina": true,
-      "a11y": true,
-      "webpack": true,
-      "gulp": true,
-      "eslint": true,
-      "stylelint": true,
-      "prettier": true
-    }
+    "stackList": [
+      "a11y",
+      "crossbrowser",
+      "eslint",
+      "gulp",
+      "html",
+      "javascript",
+      "mobileFirst",
+      "prettier",
+      "responsive",
+      "retina",
+      "sass",
+      "stylelint",
+      "webpack"
+    ]
   },
   {
     "id": "nerds",
@@ -408,11 +408,6 @@
     "iconsTheme": "dark",
     "type": "learning",
     "status": "archive",
-    "stack": {
-      "css": true,
-      "html": true,
-      "a11y": true,
-      "crossbrowser": true
-    }
+    "stackList": ["a11y", "crossbrowser", "css", "html"]
   }
 ]

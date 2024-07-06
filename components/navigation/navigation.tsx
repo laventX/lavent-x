@@ -19,14 +19,14 @@ type NavigationProps = CustomComponentProps;
 export default function Navigation({ className }: NavigationProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
-  const breakpoint3lg = getBreakpoint('3lg');
-
   const { width: windowWidth = 0 } = useWindowSize({
     initializeWithValue: false
   });
 
+  const wideScreenBreakpoint = getBreakpoint('3lg');
+
   const [screenWide, setScreenWide] = useState<boolean>(
-    windowWidth >= breakpoint3lg
+    windowWidth >= wideScreenBreakpoint
   );
 
   const openModal = () => {
@@ -38,13 +38,13 @@ export default function Navigation({ className }: NavigationProps) {
   };
 
   useEffect(() => {
-    const isScreenWide = windowWidth >= breakpoint3lg;
+    const isScreenWide = windowWidth >= wideScreenBreakpoint;
 
     setScreenWide(isScreenWide);
     if (isScreenWide && modalOpen) {
       closeModal();
     }
-  }, [windowWidth, modalOpen, breakpoint3lg]);
+  }, [windowWidth, modalOpen, wideScreenBreakpoint]);
 
   const handleNavigationButtonClick = () => {
     openModal();

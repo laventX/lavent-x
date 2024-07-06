@@ -111,7 +111,7 @@ type ShownStackItemIconProps = CustomComponentProps & {
 function ShownStackItemIcon({ data }: ShownStackItemIconProps) {
   return (
     <>
-      <SVGIcon icon={data.icon} />
+      <SVGIcon className="w-full" icon={data.icon} />
       <span className="sr-only">{data.name}</span>
     </>
   );

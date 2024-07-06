@@ -18,7 +18,7 @@ export default function Page() {
       <Projects projects={projectsData} />
 
       <Tooltip
-        className="!z-[9000] !rounded-[16px] !bg-white/50 !text-base !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)] supports-[backdrop-filter]:!bg-white/30 supports-[backdrop-filter]:!backdrop-blur-[10px] h-md:!text-sm sm:!text-sm"
+        className="!z-[9000] !rounded-[16px] !bg-space-700 !text-base !transition-none !duration-0 h-md:!text-sm sm:!text-sm"
         anchorSelect=".tooltip"
         opacity={1}
         place="top"

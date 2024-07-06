@@ -9,6 +9,7 @@ import Background from '@/components/background/background';
 import Header from '@/components/header/header';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lavent.space'),
   title: 'LaventX | Front-End Developer',
   description: "Hi! I'm Maxim Lavent, a front-end developer.",
   authors: [

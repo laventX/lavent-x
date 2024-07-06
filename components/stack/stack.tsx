@@ -63,7 +63,6 @@ export default function Stack({
       {hasHiddenStack && (
         <HiddenStackButton
           className="h-[32px] w-[32px] h-md:h-[28px] h-md:w-[28px] sm:h-[28px] sm:w-[28px]"
-          theme={theme}
           projectID={projectID}
         />
       )}
@@ -120,10 +119,9 @@ function ShownStackItemIcon({ data }: ShownStackItemIconProps) {
 
 type HiddenStackProps = CustomComponentProps & {
   projectID: string;
-  theme: IconsTheme;
 };
 
-function HiddenStackButton({ className, projectID, theme }: HiddenStackProps) {
+function HiddenStackButton({ className, projectID }: HiddenStackProps) {
   return (
     <div
       className={clsx(
@@ -133,7 +131,7 @@ function HiddenStackButton({ className, projectID, theme }: HiddenStackProps) {
       tabIndex={0}
       data-project-id={projectID}
     >
-      <SVGIcon className="w-full" icon="more" theme={theme} />
+      <SVGIcon className="w-full" icon="more" />
     </div>
   );
 }

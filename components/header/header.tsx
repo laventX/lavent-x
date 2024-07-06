@@ -21,7 +21,6 @@ export default function Header({ className }: HeaderProps) {
         )}
       >
         <Logo />
-        {/* LanguageSwitcher */}
         <Navigation />
       </div>
     </div>

@@ -67,7 +67,7 @@ export default function Navigation({ className }: NavigationProps) {
         animationDuration={150}
         classNames={{
           modal:
-            'rounded-lg !bg-space-800/40 !p-12 !m-0 w-[320px] inline-flex justify-center !backdrop-blur-sm'
+            'rounded-lg !bg-space-800 !p-12 !m-0 w-[320px] inline-flex justify-center supports-[backdrop-filter]:!bg-space-800/40 supports-[backdrop-filter]:!backdrop-blur-sm'
         }}
         showCloseIcon={false}
       >

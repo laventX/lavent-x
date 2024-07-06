@@ -41,7 +41,7 @@ export default function Stack({
     <div
       className={clsx(
         'z-10 flex h-[32px] max-w-[272px] flex-row items-center justify-end space-x-[8px] h-md:h-[28px] h-md:max-w-[232px] h-md:space-x-[6px] sm:h-[28px] sm:max-w-[232px] sm:space-x-[6px]',
-        'before:absolute before:-bottom-[8px] before:-left-[10px] before:-right-[10px] before:-top-[8px] before:-z-10 before:block before:rounded-[20px] before:bg-white/30 before:backdrop-blur-md',
+        'before:absolute before:-bottom-[8px] before:-left-[10px] before:-right-[10px] before:-top-[8px] before:-z-10 before:block before:rounded-[20px] before:bg-white supports-[backdrop-filter]:before:bg-white/30 supports-[backdrop-filter]:before:backdrop-blur-md',
         className
       )}
     >

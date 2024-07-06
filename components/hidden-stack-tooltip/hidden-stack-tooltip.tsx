@@ -17,7 +17,7 @@ export default function HiddenStackTooltip({
 }: HiddenStackTooltipProps) {
   return (
     <Tooltip
-      className="!z-[9000] !rounded-[24px] !bg-white/30 !p-[20px] !text-base !backdrop-blur-[32px] !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)] h-md:!p-[16px] h-md:!text-sm sm:!p-[16px] sm:!text-sm"
+      className="!z-[9000] !rounded-[24px] !bg-white/90 !p-[20px] !text-base !transition-none !duration-0 ![text-shadow:0_0_10px_rgba(28,21,39,0.4)] supports-[backdrop-filter]:!bg-white/30 supports-[backdrop-filter]:!backdrop-blur-[32px] h-md:!p-[16px] h-md:!text-sm sm:!p-[16px] sm:!text-sm"
       anchorSelect=".hidden-stack-button"
       globalCloseEvents={{
         escape: true
@@ -51,7 +51,7 @@ export default function HiddenStackTooltip({
             {hiddenStack.map((stackItem) => {
               return (
                 <li
-                  className="flex h-[32px] w-full flex-row items-center space-x-[12px] h-md:h-[28px] h-md:space-x-[8px] sm:h-[28px] sm:space-x-[8px]"
+                  className="flex h-[32px] w-full flex-row items-center space-x-[12px] text-space-700 supports-[backdrop-filter]:text-white h-md:h-[28px] h-md:space-x-[8px] sm:h-[28px] sm:space-x-[8px]"
                   key={stackItem.name}
                 >
                   {stackItem.link ? (

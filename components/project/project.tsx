@@ -34,7 +34,7 @@ export default function Project({ className, data }: ProjectProps) {
       <div
         className={clsx(
           className,
-          'group/project relative h-[225px] w-full min-w-[312px] max-w-[480px] rounded-[24px] bg-space-800/40 text-space-700 shadow-2xl backdrop-blur-sm'
+          'group/project relative h-[225px] w-full min-w-[312px] max-w-[480px] rounded-[24px] bg-space-800/40 text-space-700 shadow-2xl supports-[backdrop-filter]:backdrop-blur-sm'
         )}
         tabIndex={0}
       >

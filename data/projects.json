@@ -385,6 +385,7 @@
       "a11y",
       "crossbrowser",
       "eslint",
+      "googleMapsAPI",
       "gulp",
       "html",
       "javascript",
@@ -408,6 +409,6 @@
     "iconsTheme": "dark",
     "type": "learning",
     "status": "archive",
-    "stackList": ["a11y", "crossbrowser", "css", "html"]
+    "stackList": ["a11y", "crossbrowser", "css", "googleMapsAPI", "html"]
   }
 ]
